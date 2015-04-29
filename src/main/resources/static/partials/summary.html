@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-md-10">
+	 
+      <!-- stocks table --> 	 
+	  <section id="customer-details-table">
+          <table class="table-bordered table-striped table-condensed cf">
+            <thead class="cf">
+              <tr>
+                <th>Id</th>
+				<th>Title</td>
+				<th>Forename</td>
+				<th>Surname</td>
+			  </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{customerDetails.id}}</td>
+				<td>{{customerDetails.title}}</td>
+				<td>{{customerDetails.firstName}}</td>
+				<td>{{customerDetails.lastName}}</td>
+              </tr>
+            </tbody>
+          </table>
+       </section>
+
+        <br/>
+        <br/>
+
+        <form name="getCustomerDetailsForm" method="post" novalidate>
+            <label for="customerId">Customer Identifier:</label>
+            <input id="customerId" type="text" name="customerId" ng-model="customerId" required /><br />
+            <button type="button" ng-click="getCustomerDetails()" class="btn btn-primary">Get Customer Details</button>
+        </form>
+    </div>
+  </div>
+</div>
